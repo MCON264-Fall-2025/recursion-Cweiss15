@@ -35,10 +35,10 @@ public class BinarySearch {
 
 
     private static int search(int[] a, int target, int lo, int hi) {
-        int mid = lo + (hi - lo) / 2;
         if(lo > hi)
             return -1;
-        else if (target < a[mid]) return search(a, target, lo, mid - 1);
+        int mid = lo + (hi - lo) / 2;
+        if (target < a[mid]) return search(a, target, lo, mid - 1);
         else if (target > a[mid]) return search(a, target, mid + 1, hi);
         else return mid;
     }
